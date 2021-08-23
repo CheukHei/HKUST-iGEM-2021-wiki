@@ -1,194 +1,88 @@
-<html>
+<html lang="en">
 
-<style>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    /* reset all the default styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="https://2020.igem.org/wiki/index.php?title=Template:Vilnius-Lithuania/CSS/clearout&action=raw&ctype=text/css" />
+    <link href="https://2021.igem.org/wiki/index.php?title=Template:HKUST/CSS/bootstrap.css&action=raw&action=raw&ctype=text/css" rel="stylesheet" type="text/css" />
 
-    html {
-        font-size: 62.5%;
-        font-family: 'Open Sans', sans-serif;
-    }
+    <title>ShellBi</title>
+</head>
 
-    li {
-        list-style: none;
-    }
+<body>
 
-    a {
-        text-decoration: none;
-    }
-
-    .header{
-        border-bottom: 1px solid #E2E8F0;
-    }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1.5rem;
-    }
-
-    .menu-button {
-        display: none; /* Button is hidden by default */
-        background-color: transparent;
-        background-repeat: no-repeat;
-        border: none;
-        outline: none;
-    }
-
-    .button span {
-        position: absolute;
-        clip: rect(1px, 1px, 1px, 1px);
-        padding: 0;
-        border: 0;
-        height: 1px;
-        width: 1px;
-        overflow: hidden;
-    }
-
-    .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.1s ease-in-out;
-        transition: all 0.1s ease-in-out;
-        background-color: #101010;
-    }
-
-    .nav-menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .nav-item {
-        margin-left: 5rem;
-    }
-
-    .nav-link{
-        font-size: 1.6rem;
-        font-weight: 400;
-        color: #475569;
-    }
-
-    .nav-link:hover{
-        color: #482ff7;
-    }
-
-    .nav-logo {
-        font-size: 2.1rem;
-        font-weight: 500;
-        color: #482ff7;
-    }
-
-    /* Adds responsiveness by hiding nav-menu and displaying the menu button. */
-    @media only screen and (max-width: 768px) {
-        .nav-menu {
-            position: fixed;
-            left: -100%;
-            top: 5rem;
-            flex-direction: column;
-            background-color: #fff;
-            width: 100%;
-            border-radius: 10px;
-            text-align: center;
-            transition: 0.1s;
-            box-shadow:
-                0 10px 27px rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-menu.active {
-            left: 0;
-        }
-
-        .nav-item {
-            margin: 2.5rem 0;
-        }
-
-        .menu-button {
-            display: block;
-            cursor: pointer;
-        }
-
-        .menu-button.active .bar:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-button.active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-
-        .menu-button.active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
-
-    }
-
-
-
-
-
-    </style>
-
-<header class="header">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <a href="#" class="nav-logo">ShellBi</a>
-            <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Project</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Wet lab</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Dry lab</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Community</a>
-            </li>
-            </ul>
-        <button class="menu-button" aria-label="toggle menu">
-            <span>Menu
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            </span>
-        </button>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" role="navigation">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">ShellBi</a>
+            <!-- Hamburger button to toggle the menu -->
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navmenu links -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="projectDropdown" href="#" role="button" data-bs-toggle="dropdown" ariaaria-haspopup="true" aria-expanded="false">
+                            Project
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="projectDropdown">
+                            <a href="https://2021.igem.org/Team:HKUST/Description" class="dropdown-item">Description</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Results" class="dropdown-item">Results</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Engineering" class="dropdown-item">Engineering</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Proof_of_concept" class="dropdown-item">Proof of concept</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Implementation" class="dropdown-item">Implementation</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Contribution" class="dropdown-item">Contribution</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Safety" class="dropdown-item">Safety</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="experimentsAndModelsDropdown" href="#" role="button" data-bs-toggle="dropdown" ariaaria-haspopup="true" aria-expanded="false">
+                            Experiments and models
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="experimentsAndModelsDropdown">
+                            <a href="https://2021.igem.org/Team:HKUST/Experiments" class="dropdown-item">Experiments</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Notebook" class="dropdown-item">Notebook</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Model" class="dropdown-item">Model</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="communityDropdown" href="#" role="button" data-bs-toggle="dropdown" ariaaria-haspopup="true" aria-expanded="false">
+                            Community
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="communityDropdown">
+                            <a href="https://2021.igem.org/Team:HKUST/Human_Practices" class="dropdown-item">Human practices</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Collaborations" class="dropdown-item">Collaborations</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Communication" class="dropdown-item">Communication</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-parts" href="https://2021.igem.org/Team:HKUST/Parts" class="nav-link">Parts</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="teamDropdown" href="#" role="button" data-bs-toggle="dropdown" ariaaria-haspopup="true" aria-expanded="false">
+                            Team
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="teamDropdown">
+                            <a href="https://2021.igem.org/Team:HKUST/Attributions" class="dropdown-item">Attributions</a>
+                            <a href="https://2021.igem.org/Team:HKUST/Team" class="dropdown-item">Team members</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-<script>
-    /* toggles the nav menu when the user clicks on the hamburger. */
-    const hamburger = document.querySelector(".menu-button");
-    const navMenu = document.querySelector(".nav-menu");
+    <!-- Optional JavaScript; choose one of the two! -->
 
-    hamburger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    }
-
-    const navLink = document.querySelectorAll(".nav-link");
-
-    /* closes the nav menu once the user clicks on a link */
-    navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-    function closeMenu() {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }
-
-
-</script>
-
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKUST/JS/bootstrap_bundle&action=raw&ctype=text/javascript"></script>
+</body>
 
 </html>
