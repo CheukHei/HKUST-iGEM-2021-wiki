@@ -1,3 +1,5 @@
+{{HKUST/CSS/wikiStripdown}}
+
 <html lang="en">
 
 <head>
@@ -6,14 +8,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="https://2021.igem.org/wiki/index.php?title=Template:HKUST/CSS/wikiStripdown.css&action=raw&ctype=text/css" />
-    <link href="https://2021.igem.org/wiki/index.php?title=Template:HKUST/CSS/bootstrap.css&action=raw&action=raw&ctype=text/css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://2021.igem.org/wiki/index.php?title=Template:HKUST/CSS/bootstrap.css&action=raw&ctype=text/css" type="text/css" />
+    <style>
+
+        /* Evil hack to fight the iGEM mediawiki skin */
+        #globalWrapper {
+            font-size: initial !important;
+        }
+        h1 h2 h3 h4 h5 h6 {
+            color: inherit !important;
+        }
+
+        .nav-position {
+            top: 16px;
+        }
+
+        #top_menu_under {
+            height: 76.8px;
+        }
+
+        #top_menu_14 #top_menu_inside {
+            box-sizing: content-box;
+        }
+
+        #top_menu_inside ul li a {
+            text-decoration: none;
+        }
+
+
+    </style>
 
     <title>ShellBi</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark" role="navigation">
+<body id="navigation">
+    <nav class="navbar fixed-top navbar-expand-md bg-dark navbar-dark nav-position" role="navigation">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="#">ShellBi</a>
@@ -25,7 +54,7 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="https://2021.igem.org/Team:HKUST" class="nav-link">Home</a>
+                        <a href="https://2021.igem.org/Team:HKUST" class="nav-link me-2">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="projectDropdown" href="#" role="button" data-bs-toggle="dropdown" ariaaria-haspopup="true" aria-expanded="false">
@@ -82,6 +111,8 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script type="text/javascript" src="https://2021.igem.org/wiki/index.php?title=Template:HKUST/JS/bootstrap_bundle&action=raw&ctype=text/javascript"></script>
+    <!-- MATHJAX -->
+    <script type="text/javascript" src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
